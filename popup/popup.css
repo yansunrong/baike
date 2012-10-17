@@ -1,0 +1,111 @@
+*:focus {
+  outline: none;
+}
+body {
+  background-color: #F7F7F7;
+  font: 12px Simsun;
+  margin: 0;
+  width: 288px;
+}
+header {
+  height: 19px;
+  overflow: hidden;
+  padding:8px 11px 8px 12px;
+}
+header .logo {
+  float: left;
+}
+header .feedback, header .help {
+  float: right;
+  line-height: 16px;
+  margin-left: 10px;
+}
+header .feedback a {
+  background: url(images/feedback.png) no-repeat 0 2px;
+  color: black;
+  display: inline-block;
+  padding: 2px 0 2px 21px;
+  text-decoration: none;
+}
+header .feedback a:hover {
+  background-image: url(images/feedback_hover.png);
+  text-decoration: underline;
+}
+header .help a {
+  background: url(images/help.png) no-repeat 0 2px;
+  color: black;
+  display: inline-block;
+  padding: 2px 0 2px 21px;
+  text-decoration: none;
+}
+header .help a:hover {
+  background-image: url(images/help_hover.png);
+  text-decoration: underline;
+}
+.discount a {
+  background: url(images/discount.png) no-repeat;
+  float: right;
+  line-height: 18px;
+  display: inline-block;
+  margin: 7px 0 7px 0; 
+  padding: 0 12px 0 21px;
+  color: red;
+  text-decoration: none;
+}
+.discount a:hover {
+  background-image: url(images/discount_hover.png);
+  text-decoration: underline;
+}
+form {
+  padding: 0 11px 0 12px;
+  position: relative;
+}
+form .text {
+  -webkit-border-radius: 4px;
+  -webkit-box-shadow: 0 2px 2px #DDD inset;
+  -webkit-box-sizing: border-box;
+  border: 1px solid #BABABA;
+  font: 14px Simsun;
+  height: 38px;
+  padding: 0 90px 0 10px;
+  width: 265px;
+  color: #000;
+   font-weight: 700;
+}
+form .focus {
+  -webkit-border-radius: 4px;
+  -webkit-box-shadow: 0 2px 2px #DDD inset;
+  -webkit-box-sizing: border-box;
+  border: 1px solid #F9BE52;
+  font: 14px Simsun;
+  height: 38px;
+  padding: 0 90px 0 10px;
+  width: 265px;
+}
+form .submit {
+  -webkit-border-radius: 4px;
+  -webkit-box-sizing: border-box;
+  background: -webkit-gradient(linear, 0 0, 0 bottom, from(#FDFDFD), to(#D1D1D1));
+  border: 1px solid #C1C1C1;
+  cursor: pointer;
+  font: bold 14px Simsun;
+  height: 29px;
+  position: absolute;
+  right: 16px;
+  top: 4px;
+  width: 78px;
+}
+form .submit span {
+  position: relative;
+}
+form .submit:hover {
+  background: -webkit-gradient(linear, 0 0, 0 bottom, from(#FDFDFD), to(#E3E3E3));
+}
+form .submit:active {
+  background: -webkit-gradient(linear, 0 0, 0 bottom, from(#D1D1D1), to(#FDFDFD));
+  padding: 1px 0 0 2px;
+}
+form .submit:active span {
+  left: 1px;
+  top: 1px;
+}

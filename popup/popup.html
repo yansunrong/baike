@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<link rel="stylesheet" type="text/css" href="popup.css">
+<link type="text/css" href="css/smoothness/jquery-ui-1.8.24.custom.css" rel="stylesheet" />
+<script type="text/javascript" src="js/jquery-1.8.2.min.js"></script>
+<script type="text/javascript" src="js/jquery-ui-1.8.24.custom.min.js"></script>
+<script type="text/javascript" src='popup.js'></script>
+</head>
+<body style="height:100px;">
+<header>
+<div class="logo">
+    <!--
+	<a id="logo" href="javascript:void(0)" target="_blank">
+      <img src="images/logo.png"/>
+    </a>
+	-->
+  </div>
+  <div class="feedback">
+    <a id="fb" href="javascript:void(0)" target="_blank">反馈</a>
+  </div>
+  <!--
+  <div class="help">
+    <a id="help" href="javascript:void(0)" target="_blank">使用帮助</a>
+  </div>
+  -->
+  </header>
+<form action="http://baike.baidu.com/search/word" method="get" target="_blank">
+  <input type="text" class="text" id="searchbox" name="word" maxlength="100" placeholder="请输入词条名"/>
+  <input name="pic" value="1" type="hidden"/>
+  <input name="sug" value="1"  type="hidden"/>
+  <input name="enc" value="utf8"  type="hidden"/>
+  <input type='hidden' name='keyfrom' value='extension_button' />
+  <button type='submit' class='submit'>进入词条</button>
+</form>
+</body>
+</html>
