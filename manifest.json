@@ -8,8 +8,8 @@
       "default_title": "百度百科"
    },
    "content_scripts": [ {
-      "css": [ "baike.css" ],
-      "js": [ "js/baike.js" ],
+      "css": [ "content_scripts/baike.css" ],
+      "js": [ "content_scripts/baike.js" ],
       "matches": [ "http://*/*" ]
    } ],
    "content_security_policy": "script-src 'self' 'unsafe-eval' ; object-src 'self' ; img-src 'self' chrome-extension://'",
@@ -22,6 +22,6 @@
    "name": "百度百科",
    "permissions": [ "tabs", "http://*/*", "https://*/*", "webRequest", "webRequestBlocking", "contextMenus" ],
    "update_url": "http://clients2.google.com/service/update2/crx",
-   "version": "1.6",
+   "version": "1.7",
    "web_accessible_resources": [ "icon.png" ]
 }
