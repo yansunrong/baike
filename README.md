@@ -14,5 +14,5 @@ baike
 
 ##在线demo
 
-[https://chrome.google.com/webstore/detail/%E7%99%BE%E5%BA%A6%E7%99%BE%E7%A7%91%E5%9C%A8%E7%BA%BF%E5%88%92%E8%AF%8D%E5%B7%A5%E5%85%B7/lklfjnpalpkacoikjkhnakoaamnfbmkd).
+[安装地址](https://chrome.google.com/webstore/detail/%E7%99%BE%E5%BA%A6%E7%99%BE%E7%A7%91%E5%9C%A8%E7%BA%BF%E5%88%92%E8%AF%8D%E5%B7%A5%E5%85%B7/lklfjnpalpkacoikjkhnakoaamnfbmkd)
 
