@@ -17,11 +17,10 @@
    "icons": {
       "128": "icon.png"
    },
-   "key": "MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQCmTp4mnaH1VRZivFfcsovVbwQkTAPHKg15tZtk/N1np9Qj7L+N7heNMTVwDfr7KDTU6TqQAl2nzTFXZVE18qq+db+CTwFOYGSzgp67n4wBSe6yfsPGeJx3XHlIuL1CFqnE9huGHO4TTWfpv+kUWpdU5PYwWkvvGPbLE6zRDHS27QIDAQAB",
    "manifest_version": 2,
    "name": "百度百科",
    "permissions": [ "tabs", "http://*/*", "https://*/*", "webRequest", "webRequestBlocking", "contextMenus" ],
    "update_url": "http://clients2.google.com/service/update2/crx",
-   "version": "1.7",
+   "version": "1.8",
    "web_accessible_resources": [ "icon.png" ]
 }

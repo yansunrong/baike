@@ -14,18 +14,25 @@ chrome.webRequest.onBeforeSendHeaders.addListener(
 
 chrome.extension.onRequest.addListener(function (request, sender, sendResponse) {
     var enableBaike = true;
+    var enableSimple = false;
     if (localStorage["enableBaike"] == 'false') {
         enableBaike = false;
     }
+    if (localStorage["enableSimple"] == 'true') {
+        enableSimple = true;
+    }
     switch (request.type) {
         case 'getOptions':
-            sendResponse({enableBaike:enableBaike});
+            sendResponse({enableBaike:enableBaike,enableSimple:enableSimple});
             break;
         case 'setOptions':
-            localStorage["enableBaike"] = request.enableBaike;
-            setIconStatus(enableBaike)
-
-
+            if( typeof request.enableBaike != 'undefined'){
+              localStorage["enableBaike"] = request.enableBaike;  
+                setIconStatus(enableBaike)
+            } 
+            if( typeof request.enableSimple != 'undefined'){
+                localStorage["enableSimple"] = request.enableSimple;
+            }
     }
 });
 
@@ -41,7 +48,6 @@ function setIconStatus() {
         chrome.browserAction.setBadgeText({
             text:""
         });
-
     }
 }
 

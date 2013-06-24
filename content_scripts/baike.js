@@ -163,3 +163,26 @@ document.addEventListener("mousedown", function (e) {
         }
     }
 });
+
+//显示精简版
+function showSimple(){
+    //制取百科的界面
+    var main = document.querySelectorAll('.main-body');
+    if(main.length > 0){
+        main[0].className+=' modal';
+        var mask = '<div id="__nightingale_view_cover" style="width: 100%; height: 100%; -webkit-transition: -webkit-transform 10s ease-in-out; transition: -webkit-transform 10s ease-in-out; position: fixed !important; left: 0px !important; bottom: 0px !important; overflow: hidden !important; background-color: rgb(0, 0, 0) !important; pointer-events: none !important; z-index: 1000; opacity: 0.85; background-position: initial initial !important; background-repeat: initial initial !important;"></div>';
+        var maskDiv = document.createElement('div');
+        maskDiv.innerHTML  =  mask;
+        document.documentElement.appendChild(maskDiv);
+    }
+    
+}
+
+
+chrome.extension.sendRequest(
+        {type:"getOptions"},
+        function (response) {
+            if (response.enableSimple) {
+                showSimple();
+            }
+})

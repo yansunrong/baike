@@ -1,5 +1,5 @@
 $(function () {
-    $.getScript('js/jquery-ui-1.8.24.custom.min.js', function () {
+    $.getScript('js/jquery-ui-1.10.3.custom.min.js', function () {
 
         window.baidu = window.baidu || {};
         window.baidu.sug = function (data) {
@@ -37,21 +37,31 @@ $(function () {
         });
     })
     var checkbox = $('#baike_disable');
+    var simpleCheckbox = $('#baike_simple_disable');
     chrome.extension.sendRequest(
         {type:"getOptions"},
         function (response) {
             if (response.enableBaike) {
-                checkbox.attr("checked", false);
+                checkbox.attr("checked", true);
             }
+            if (response.enableSimple) {
+                simpleCheckbox.attr("checked", true);
+            }
+            
         })
 
-    checkbox.click(function() {
+    checkbox.change(function() {
         chrome.extension.sendRequest(
-            {type:"setOptions",enableBaike:(checkbox.attr("checked") == "checked")?false:true},
+            {type:"setOptions",enableBaike:(checkbox.attr("checked") == "checked")?true:false},
             function (response) {
+            })
+    });
 
+    simpleCheckbox.change(function() {
+        chrome.extension.sendRequest(
+            {type:"setOptions",enableSimple:(simpleCheckbox.attr("checked") == "checked")?true:false},
+            function (response) {
             })
     });
 
 });
-

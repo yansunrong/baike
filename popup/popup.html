@@ -25,7 +25,27 @@
 <div class="config">
     <fieldset>
         <legend>选项设置</legend>
-        <input type="checkbox" id="baike_disable" name="baike_disable" checked="checked"> <label for="baike_disable">关闭百科划词</label>
+        <label class="checkbox toggle candy" onclick="">
+            <input id="baike_disable" type="checkbox" />
+            <p>
+                划词状态
+                <span>开</span>
+                <span>关</span>
+            </p>
+
+            <a class="slide-button"></a>
+        </label>
+        <label class="checkbox toggle candy" onclick="">
+            <input id="baike_simple_disable" type="checkbox" />
+            <p>
+                精简模式
+                <span>开</span>
+                <span>关</span>
+            </p>
+
+            <a class="slide-button"></a>
+        </label>
+
     </fieldset>
 </div>
 <script type="text/javascript" src="js/jquery-1.8.2.min.js"></script>
